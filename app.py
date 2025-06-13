@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 from groq import Groq
-from dotenv import load_dotenv  # ✅ You missed this line
+from dotenv import load_dotenv  
 import os
 
 app = Flask(__name__)
 
-load_dotenv()  # ✅ Now this works
+load_dotenv()  
 
 api_key = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=api_key)
